@@ -3,14 +3,13 @@ var unirest = require('unirest');
 var random_useragent = require('random-useragent');
 const isUrl = require("is-valid-http-url");
 const fs = require("fs");
-var server = https.createServer(options);
 
-var options = {
+var httpsOptions = {
   key: fs.readFileSync("server.key"),
   cert: fs.readFileSync("server.cert"),
 };
 
-https.createServer(options, function (req, res) {
+https.createServer(httpsOptions, function (req, res) {
     res.writeHead(200, {
         "Access-Control-Max-Age":3600,
         "Access-Control-Allow-Origin": "*",
