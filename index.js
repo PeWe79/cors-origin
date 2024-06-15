@@ -5,13 +5,13 @@ const isUrl = require("is-valid-http-url");
 const fs = require("fs");
 
 var httpsOptions = {
-  key: fs.readFileSync("server.key"),
-  cert: fs.readFileSync("server.cert"),
+    key: fs.readFileSync("server.key"),
+    cert: fs.readFileSync("server.cert"),
 };
 
 https.createServer(httpsOptions, function (req, res) {
     res.writeHead(200, {
-        "Access-Control-Max-Age":3600,
+        "Access-Control-Max-Age": 3600,
         "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "Authorization,Accept,Origin,DNT,X-CustomHeader,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Content-Range,Range",
         "Content-Type": "application/json"
