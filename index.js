@@ -25,6 +25,6 @@ https.createServer(httpsOptions, function (req, res) {
                 res.end(resku.raw_body);
             });
     } else {
-        res.end("error!, Example: https://origin.yourdomain.com/?url=https://www.yourdomain.com")
+        res.end("error!, Example: https://cors.yourdomain.com/?url=https://www.yourdomain.com")
     };
 }).listen(443);
